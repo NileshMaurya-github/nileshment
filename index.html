@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nileshment — Your curated library of 25 book summaries across Self-Help, Productivity, Finance, Psychology, and Biography. Learn faster. Live better." />
+  <meta name="theme-color" content="#080810" />
+  <title>Nileshment — Book Notes & Summaries</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nileshment — Book Notes & Summaries" />
+  <meta property="og:description" content="25 book summaries across 5 categories. Learn in minutes what took years to write." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231e3a8a'/><path d='M25 75V25A10 10 0 0 1 35 15h40v50A10 10 0 0 1 65 75H25z' fill='none' stroke='white' stroke-width='6'/><path d='M25 75a10 10 0 0 1 10-10h40' fill='none' stroke='white' stroke-width='6'/></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nileshment Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <div>
+          <span class="logo-text">Nileshment</span>
+          <span class="logo-sub">Book Notes</span>
+        </div>
+      </a>
+      <div class="navbar-actions">
+        <nav class="nav-categories" aria-label="Browse by category">
+          <a href="#" class="nav-cat" onclick="filterCat('self-help'); return false;">🧠 Self-Help</a>
+          <a href="#" class="nav-cat" onclick="filterCat('productivity'); return false;">⚡ Productivity</a>
+          <a href="#" class="nav-cat" onclick="filterCat('finance'); return false;">💰 Finance</a>
+          <a href="#" class="nav-cat" onclick="filterCat('psychology'); return false;">🔬 Psychology</a>
+          <a href="#" class="nav-cat" onclick="filterCat('biography'); return false;">🌟 Biography</a>
+        </nav>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="home" aria-label="Welcome">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-slider" id="heroSlider">
+
+      <!-- ── SELF-HELP ── -->
+      <!-- Slide 1: Atomic Habits -->
+      <div class="hero-slide active">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🧠 Self-Help</span></div>
+          <h1 class="hero-title"><span class="line">Atomic</span><span class="line grad-text">Habits</span></h1>
+          <p class="hero-subtitle">Master the tiny 1% improvements that compound into remarkable results over time.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('atomic-habits')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_atomic_habits_1773640582610.png" class="slide-book" alt="Atomic Habits" loading="lazy">
+          <div class="slide-quote">"You do not rise to the level of your goals. You fall to the level of your systems."</div>
+        </div>
+      </div>
+
+      <!-- Slide 2: The 4-Hour Workweek -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🧠 Self-Help</span></div>
+          <h1 class="hero-title"><span class="line">The 4-Hour</span><span class="line grad-text">Workweek</span></h1>
+          <p class="hero-subtitle">Escape 9-5, live anywhere, and join the New Rich by designing life around freedom.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('4-hour-workweek')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_four_hour_workweek_1773640671752.png" class="slide-book" alt="The 4-Hour Workweek" loading="lazy">
+          <div class="slide-quote">"What we fear doing most is usually what we most need to do."</div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Deep Work -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🧠 Self-Help</span></div>
+          <h1 class="hero-title"><span class="line">Deep</span><span class="line grad-text">Work</span></h1>
+          <p class="hero-subtitle">The ability to focus without distraction is a superpower in our modern distracted world.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('deep-work')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_deep_work_1773640775734.png" class="slide-book" alt="Deep Work" loading="lazy">
+          <div class="slide-quote">"If you don't produce, you won't thrive—no matter how skilled or talented you are."</div>
+        </div>
+      </div>
+
+      <!-- ── PRODUCTIVITY ── -->
+      <!-- Slide 4: Getting Things Done -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">⚡ Productivity</span></div>
+          <h1 class="hero-title"><span class="line">Getting</span><span class="line grad-text">Things Done</span></h1>
+          <p class="hero-subtitle">The art of stress-free productivity through a trusted external system for capturing ideas and tasks.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('getting-things-done')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_getting_things_done_1773640601093.png" class="slide-book" alt="Getting Things Done" loading="lazy">
+          <div class="slide-quote">"Your mind is for having ideas, not holding them."</div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Essentialism -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">⚡ Productivity</span></div>
+          <h1 class="hero-title"><span class="line">Essential-</span><span class="line grad-text">ism</span></h1>
+          <p class="hero-subtitle">The disciplined pursuit of less — doing only what matters most and eliminating everything else.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('essentialism')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_essentialism_1773640686067.png" class="slide-book" alt="Essentialism" loading="lazy">
+          <div class="slide-quote">"If you don't prioritise your life, someone else will."</div>
+        </div>
+      </div>
+
+      <!-- Slide 6: The ONE Thing -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">⚡ Productivity</span></div>
+          <h1 class="hero-title"><span class="line">The ONE</span><span class="line grad-text">Thing</span></h1>
+          <p class="hero-subtitle">Extraordinary results come from narrowing your focus to the one thing that makes everything else easier.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('the-one-thing')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_the_one_thing_1773640848164.png" class="slide-book" alt="The ONE Thing" loading="lazy">
+          <div class="slide-quote">"Success is sequential, not simultaneous."</div>
+        </div>
+      </div>
+
+      <!-- ── FINANCE ── -->
+      <!-- Slide 7: Psychology of Money -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">💰 Finance</span></div>
+          <h1 class="hero-title"><span class="line">Psychology of</span><span class="line grad-text">Money</span></h1>
+          <p class="hero-subtitle">Timeless lessons on wealth, greed, and happiness — it's not about what you know, but how you behave.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('psychology-of-money')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_psychology_of_money_1773640702611.png" class="slide-book" alt="Psychology of Money" loading="lazy">
+          <div class="slide-quote">"Wealth is what you don't see."</div>
+        </div>
+      </div>
+
+      <!-- Slide 8: Rich Dad Poor Dad -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">💰 Finance</span></div>
+          <h1 class="hero-title"><span class="line">Rich Dad</span><span class="line grad-text">Poor Dad</span></h1>
+          <p class="hero-subtitle">What the rich teach their kids about money that the poor and middle class do not.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('rich-dad-poor-dad')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_rich_dad_poor_dad_1773640615973.png" class="slide-book" alt="Rich Dad Poor Dad" loading="lazy">
+          <div class="slide-quote">"The rich don't work for money. They make money work for them."</div>
+        </div>
+      </div>
+
+      <!-- Slide 9: Die With Zero -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">💰 Finance</span></div>
+          <h1 class="hero-title"><span class="line">Die With</span><span class="line grad-text">Zero</span></h1>
+          <p class="hero-subtitle">Stop deferring your life. Optimize for maximum life experiences, not maximum net worth.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('die-with-zero')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_die_with_zero_1773640862646.png" class="slide-book" alt="Die With Zero" loading="lazy">
+          <div class="slide-quote">"The point of life is to experience as much as possible of what it has to offer."</div>
+        </div>
+      </div>
+
+      <!-- ── PSYCHOLOGY ── -->
+      <!-- Slide 10: Thinking, Fast and Slow -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🔬 Psychology</span></div>
+          <h1 class="hero-title"><span class="line">Thinking, Fast</span><span class="line grad-text">and Slow</span></h1>
+          <p class="hero-subtitle">A groundbreaking exploration of two systems of thought — and why we're not as rational as we believe.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('thinking-fast-slow')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_thinking_fast_slow_1773640631974.png" class="slide-book" alt="Thinking Fast and Slow" loading="lazy">
+          <div class="slide-quote">"Nothing in life is as important as you think it is while you are thinking about it."</div>
+        </div>
+      </div>
+
+      <!-- Slide 11: Influence -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🔬 Psychology</span></div>
+          <h1 class="hero-title"><span class="line">Influence:</span><span class="line grad-text">The Psychology</span></h1>
+          <p class="hero-subtitle">The six universal principles of persuasion that shape every yes or no you've ever heard.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('influence')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_influence_1773640721307.png" class="slide-book" alt="Influence" loading="lazy">
+          <div class="slide-quote">"The most basic form of human stupidity is forgetting what we are trying to accomplish."</div>
+        </div>
+      </div>
+
+      <!-- Slide 12: Man's Search for Meaning -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🔬 Psychology</span></div>
+          <h1 class="hero-title"><span class="line">Man's Search</span><span class="line grad-text">for Meaning</span></h1>
+          <p class="hero-subtitle">Viktor Frankl's harrowing Holocaust memoir reveals that meaning — not pleasure — is the deepest human motivation.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('mans-search-for-meaning')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_mans_search_for_meaning_1773640582615.jpeg" class="slide-book" alt="Man's Search for Meaning" loading="lazy">
+          <div class="slide-quote">"When we are no longer able to change a situation, we are challenged to change ourselves."</div>
+        </div>
+      </div>
+
+      <!-- ── BIOGRAPHY ── -->
+      <!-- Slide 13: Elon Musk -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🌟 Biography</span></div>
+          <h1 class="hero-title"><span class="line">Elon</span><span class="line grad-text">Musk</span></h1>
+          <p class="hero-subtitle">The real story of the most audacious entrepreneur of our era — rockets, cars, and civilization itself.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('elon-musk')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_elon_musk_1773640647170.png" class="slide-book" alt="Elon Musk" loading="lazy">
+          <div class="slide-quote">"When something is important enough, you do it even if the odds are not in your favour."</div>
+        </div>
+      </div>
+
+      <!-- Slide 14: Shoe Dog -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🌟 Biography</span></div>
+          <h1 class="hero-title"><span class="line">Shoe</span><span class="line grad-text">Dog</span></h1>
+          <p class="hero-subtitle">Phil Knight's raw memoir of building Nike from a $50 loan into one of the world's most iconic brands.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('shoe-dog')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_shoe_dog_1773640582616.jpeg" class="slide-book" alt="Shoe Dog" loading="lazy">
+          <div class="slide-quote">"Don't tell people how to do things; tell them what to do and let them surprise you."</div>
+        </div>
+      </div>
+
+      <!-- Slide 15: Steve Jobs -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <div class="hero-eyebrow"><div class="eyebrow-dot"></div><span class="eyebrow-text">🌟 Biography</span></div>
+          <h1 class="hero-title"><span class="line">Steve</span><span class="line grad-text">Jobs</span></h1>
+          <p class="hero-subtitle">Walter Isaacson's definitive story of the creative genius who built Apple and changed every industry he touched.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="openBookById('steve-jobs')">✦ Read Summary</button>
+            <button class="btn btn-secondary" onclick="scrollToBooks()">Browse All Books</button>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="images/book_steve_jobs_1773640735898.png" class="slide-book" alt="Steve Jobs" loading="lazy">
+          <div class="slide-quote">"The people who are crazy enough to think they can change the world are the ones who do."</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slider-controls container">
+      <div class="slider-dots" id="sliderDots">
+        <div class="dot active" data-idx="0"></div>
+        <div class="dot" data-idx="1"></div>
+        <div class="dot" data-idx="2"></div>
+        <div class="dot" data-idx="3"></div>
+        <div class="dot" data-idx="4"></div>
+        <div class="dot" data-idx="5"></div>
+        <div class="dot" data-idx="6"></div>
+        <div class="dot" data-idx="7"></div>
+        <div class="dot" data-idx="8"></div>
+        <div class="dot" data-idx="9"></div>
+        <div class="dot" data-idx="10"></div>
+        <div class="dot" data-idx="11"></div>
+        <div class="dot" data-idx="12"></div>
+        <div class="dot" data-idx="13"></div>
+        <div class="dot" data-idx="14"></div>
+      </div>
+      <div class="slider-arrows">
+        <button id="slidePrev" aria-label="Previous">←</button>
+        <button id="slideNext" aria-label="Next">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SEARCH BAR ═══════════════════ -->
+  <section class="search-section" id="searchSection" aria-label="Search and filter">
+    <div class="container">
+      <div class="search-wrap">
+        <div class="search-input-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search books, authors, topics…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search books"
+          />
+          <button class="search-clear" id="searchClear" aria-label="Clear search" title="Clear search">✕</button>
+        </div>
+        <div class="result-count" id="resultCount" aria-live="polite">
+          <strong>25</strong> books
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CATEGORY TABS ═══════════════════ -->
+  <section class="cat-tabs-section" id="booksSection" aria-label="Book categories">
+    <div class="container">
+      <div class="cat-tabs" id="catTabs" role="tablist" aria-label="Filter by category">
+        <!-- Tabs injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BOOKS GRID ═══════════════════ -->
+  <section class="books-section" aria-label="Books library">
+    <div class="container">
+      <div class="section-header">
+        <h2 style="font-size:1.2rem; font-family:'Inter',sans-serif; font-weight:700;">
+          Browse the Library
+        </h2>
+        <p class="section-sub" aria-live="polite" id="sectionSub">Hover a card to peek inside. Click to dive deep.</p>
+      </div>
+      <div class="books-grid" id="booksGrid" role="list" aria-label="Book cards">
+        <!-- Cards rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ QUOTE TICKER ═══════════════════ -->
+  <section class="quote-ticker-section" aria-label="Book quotes" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+      <!-- Quotes injected by JS -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <div class="logo-mark-sm" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            </div>
+            <span class="brand-name">Nileshment</span>
+          </div>
+          <p>
+            A curated library of book summaries designed to help you read smarter,
+            retain more, and apply wisdom faster. Every idea earns its place here.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#" onclick="filterCat('self-help')">🧠 Self-Help</a></li>
+            <li><a href="#" onclick="filterCat('productivity')">⚡ Productivity</a></li>
+            <li><a href="#" onclick="filterCat('finance')">💰 Finance</a></li>
+            <li><a href="#" onclick="filterCat('psychology')">🔬 Psychology</a></li>
+            <li><a href="#" onclick="filterCat('biography')">🌟 Biography</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Books</h4>
+          <ul>
+            <li><a href="#" onclick="openBookById('atomic-habits')">Atomic Habits</a></li>
+            <li><a href="#" onclick="openBookById('psychology-of-money')">Psychology of Money</a></li>
+            <li><a href="#" onclick="openBookById('deep-work')">Deep Work</a></li>
+            <li><a href="#" onclick="openBookById('mans-search-for-meaning')">Man's Search for Meaning</a></li>
+            <li><a href="#" onclick="openBookById('shoe-dog')">Shoe Dog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Nileshment. Made with <span class="footer-heart">♥</span> for readers everywhere.</p>
+        <p style="font-size:0.75rem; color:var(--text-3);">Inspired by good books & curious minds.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ═══════════════════ READING COUNTER ═══════════════════ -->
+  <div class="reading-counter" id="readingCounter" aria-live="polite">
+    <span class="counter-icon">📚</span>
+    <span class="counter-num" id="counterNum">0</span>
+    <span>books explored</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Footer quick-access helpers -->
+  <script>
+    function filterCat(cat) {
+      const tab = document.querySelector(`.cat-tab[data-cat="${cat}"]`);
+      if (tab) tab.click();
+      document.getElementById('booksSection').scrollIntoView({ behavior: 'smooth' });
+    }
+    function scrollToBooks() {
+      document.getElementById('booksSection').scrollIntoView({ behavior: 'smooth' });
+    }
+    function openBookById(id) {
+      window.location.href = `book?id=${id}`;
+    }
+  </script>
+</body>
+</html>

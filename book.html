@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book summary, chapter breakdown, key insights, quotes and quiz on Nileshment." />
+  <meta name="theme-color" content="#080810" />
+  <title id="pageTitle">Book Summary — Nileshment</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Nileshment Book Notes" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231e3a8a'/><path d='M25 75V25A10 10 0 0 1 35 15h40v50A10 10 0 0 1 65 75H25z' fill='none' stroke='white' stroke-width='6'/><path d='M25 75a10 10 0 0 1 10-10h40' fill='none' stroke='white' stroke-width='6'/></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/book.css" />
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress-bar" id="readingProgressBar"></div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nileshment Home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <div>
+          <span class="logo-text">Nileshment</span>
+          <span class="logo-sub">Book Notes</span>
+        </div>
+      </a>
+      <div class="navbar-actions">
+        <div class="stats-pill" id="navCatPill" aria-label="Category"></div>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Back nav -->
+  <div class="back-nav">
+    <div class="container">
+      <a href="index.html" class="back-btn" id="backBtn">
+        ← Back to Library
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ BOOK HERO ═══════════════════ -->
+  <section class="book-hero" id="bookHero" aria-label="Book overview">
+    <div class="container">
+      <div class="book-hero-inner">
+        <!-- Cover -->
+        <div class="book-hero-cover" id="heroCoverWrap">
+          <img id="heroCoverImg" src="" alt="Book cover" />
+        </div>
+        <!-- Meta -->
+        <div class="book-hero-meta">
+          <div class="book-category-badge" id="heroCat"></div>
+          <h1 class="book-hero-title" id="heroTitle">Loading…</h1>
+          <p class="book-hero-author" id="heroAuthor"></p>
+          <div class="book-hero-stats" id="heroStats"></div>
+          <blockquote class="book-tagline-quote" id="heroTagline"></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PAGE LAYOUT ═══════════════════ -->
+  <div class="container">
+    <div class="book-page-layout">
+
+      <!-- SIDEBAR / Table of Contents -->
+      <aside class="book-sidebar" id="bookSidebar" aria-label="Table of contents">
+        <div class="sidebar-title">Contents</div>
+        <ul class="toc-list" id="tocList">
+          <li class="toc-item"><a href="#sec-summary" id="toc-summary"><span class="toc-num">📖</span> Overview</a></li>
+          <li class="toc-item"><a href="#sec-chapters" id="toc-chapters"><span class="toc-num">📑</span> Chapters</a></li>
+          <li class="toc-item"><a href="#sec-insights" id="toc-insights"><span class="toc-num">💡</span> Key Insights</a></li>
+          <li class="toc-item"><a href="#sec-quotes" id="toc-quotes"><span class="toc-num">💬</span> Quotes</a></li>
+          <li class="toc-item"><a href="#sec-quiz" id="toc-quiz"><span class="toc-num">🧠</span> Quiz</a></li>
+        </ul>
+        <hr class="sidebar-divider" />
+        <button class="sidebar-cta" onclick="window.location.href='index.html'" aria-label="Back to Library">
+          📚 Back to Library
+        </button>
+        <button class="sidebar-cta" id="shareBtn" aria-label="Share this page">
+          🔗 Share
+        </button>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="book-main" id="bookMain">
+
+        <!-- ══ OVERVIEW ══ -->
+        <section class="content-section" id="sec-summary" aria-labelledby="sum-heading">
+          <div class="section-eyebrow">📖 Overview</div>
+          <h2 class="section-heading" id="sum-heading">Book Summary</h2>
+          <div class="summary-card" id="summaryCard"></div>
+          <div class="big-idea-block" id="bigIdeaBlock">
+            <div class="big-idea-label">💡 The Single Big Idea</div>
+            <div class="big-idea-text" id="bigIdeaText"></div>
+          </div>
+        </section>
+
+        <!-- ══ CHAPTERS ══ -->
+        <section class="content-section" id="sec-chapters" aria-labelledby="chap-heading">
+          <div class="section-eyebrow">📑 Chapter by Chapter</div>
+          <h2 class="section-heading" id="chap-heading">Chapter Breakdown</h2>
+          <div class="chapters-grid" id="chaptersGrid"></div>
+        </section>
+
+        <!-- ══ KEY INSIGHTS ══ -->
+        <section class="content-section" id="sec-insights" aria-labelledby="ins-heading">
+          <div class="section-eyebrow">💡 Key Takeaways</div>
+          <h2 class="section-heading" id="ins-heading">Core Insights</h2>
+          <div class="insights-grid" id="insightsGrid"></div>
+        </section>
+
+        <!-- ══ QUOTES ══ -->
+        <section class="content-section" id="sec-quotes" aria-labelledby="quo-heading">
+          <div class="section-eyebrow">💬 Words to Remember</div>
+          <h2 class="section-heading" id="quo-heading">Favourite Quotes</h2>
+          <div class="quotes-grid" id="quotesGrid"></div>
+        </section>
+
+        <!-- ══ QUIZ ══ -->
+        <section class="content-section" id="sec-quiz" aria-labelledby="quiz-heading">
+          <div class="section-eyebrow">🧠 Test Your Knowledge</div>
+          <h2 class="section-heading" id="quiz-heading">Quick Quiz</h2>
+          <div class="quiz-section" id="quizSection">
+
+            <div class="quiz-header">
+              <div class="quiz-badge">⚡ Challenge Yourself</div>
+              <div class="quiz-title" id="quizTitle">How well did you absorb this book?</div>
+              <div class="quiz-subtitle">3 questions · No pressure · Explanations included</div>
+            </div>
+
+            <div class="quiz-progress-wrap">
+              <div class="quiz-progress-label">
+                <span id="qProgLabel">Question 1 of 3</span>
+                <span id="qProgPct">0%</span>
+              </div>
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
+              </div>
+            </div>
+
+            <!-- Question -->
+            <div class="quiz-question-wrap" id="quizQuestionWrap">
+              <div class="quiz-q-num" id="qNum">Question 1</div>
+              <div class="quiz-q-text" id="qText"></div>
+            </div>
+
+            <!-- Options -->
+            <div class="quiz-options" id="quizOptions"></div>
+
+            <!-- Explanation -->
+            <div class="quiz-explanation" id="quizExplanation">
+              <div class="explanation-label">🎯 Explanation</div>
+              <div class="explanation-text" id="explanationText"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="quiz-footer">
+              <div class="quiz-score-display" id="quizScoreDisplay">Score: <strong id="quizScore">0</strong> / <span id="quizTotal">3</span></div>
+              <button class="quiz-next-btn" id="quizNextBtn">Next Question →</button>
+            </div>
+
+            <!-- Results (hidden until done) -->
+            <div class="quiz-results" id="quizResults">
+              <div class="results-emoji" id="resultsEmoji">🎉</div>
+              <div class="results-score">
+                <div class="score-frac"><span id="finalScore">3</span> / <span id="finalTotal">3</span></div>
+              </div>
+              <div class="results-message" id="resultsMessage"></div>
+              <button class="quiz-restart-btn" id="quizRestartBtn">🔄 Try Again</button>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ─── Floating progress bar ─── -->
+  <div class="floating-progress" id="floatingProgress">
+    <span id="fpLabel">0% read</span>
+    <div class="fp-bar"><div class="fp-fill" id="fpFill" style="width:0%"></div></div>
+  </div>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:20px 0 0;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-mark" style="width:34px;height:34px;font-size:1rem;" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+          </div>
+          <div><span style="font-family:'Playfair Display',serif; font-weight:700; color:var(--text);">Nileshment</span></div>
+        </div>
+        <p style="font-size:0.8rem; color:var(--text-3);">© 2025 Nileshment · Made with <span style="color:var(--red);">♥</span> for curious minds</p>
+        <a href="index.html" class="back-btn">← Browse All Books</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/book.js"></script>
+</body>
+</html>
