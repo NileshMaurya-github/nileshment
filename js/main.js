@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // "Read Full Summary" button — navigate to book page
     outerDiv.querySelector('.back-cta').addEventListener('click', (e) => {
       e.stopPropagation();
-      window.location.href = `book?id=${book.id}`;
+      window.location.href = `/book/${book.id}-summary`;
     });
 
     // Clicking the card front navigates to book page
@@ -185,8 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cardEl.classList.remove('touch-flipped');
         flipped = false;
       }
-      window.location.href = `book?id=${book.id}`;
+      window.location.href = `/book/${book.id}-summary`;
     });
+
 
     return outerDiv;
   }

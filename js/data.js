@@ -982,3 +982,9 @@ const CATEGORIES = [
   { id: "psychology", label: "Psychology",   icon: "🔬", count: 5  },
   { id: "biography",  label: "Biography",    icon: "🌟", count: 5  }
 ];
+
+// Export for Node.js build script
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = BOOKS;
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "nileshment-book-notes",
+  "version": "1.0.0",
+  "description": "Nileshment Book Summaries",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build-seo.js"
+  },
+  "author": "Nileshment",
+  "license": "ISC",
+  "dependencies": {
+    "nileshment-book-notes": "file:",
+    "playwright": "^1.40.0"
+  }
+}

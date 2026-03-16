@@ -9,8 +9,15 @@
   function qsa(sel) { return document.querySelectorAll(sel); }
 
   /* ─── Get book ID from URL ─── */
-  const params = new URLSearchParams(window.location.search);
-  const bookId = params.get('id');
+  let bookId = new URLSearchParams(window.location.search).get('id');
+  
+  if (!bookId) {
+    // Fallback: extract from SEO-friendly URL: /book/[id]-summary
+    const match = window.location.pathname.match(/\/book\/([^/]+)-summary/);
+    if (match) {
+      bookId = match[1];
+    }
+  }
 
   /* ─── Theme ─── */
   const saved = localStorage.getItem('nileshment-theme') || 'light';

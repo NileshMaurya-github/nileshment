@@ -1,5 +1,5 @@
 {
-  "buildCommand": "echo 'No build command required for static site'",
+  "buildCommand": "npm run build",
   "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true
