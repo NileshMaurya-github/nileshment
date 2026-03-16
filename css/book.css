@@ -420,10 +420,19 @@
   .book-sidebar { display: none; }
   .book-main { padding: 32px 0 60px; }
   .insights-grid { grid-template-columns: 1fr; }
-  .book-hero-inner { grid-template-columns: 1fr; gap: 24px; }
-  .book-hero-cover { width: 120px; height: 170px; }
+  .book-hero-inner { grid-template-columns: 1fr; gap: 24px; text-align: center; justify-items: center; }
+  .book-hero-cover { width: 140px; height: 200px; margin: 0 auto; }
+  .book-hero-stats { justify-content: center; }
+  .book-tagline-quote { border-left: none; padding-left: 0; padding-top: 16px; border-top: 3px solid var(--gold); }
 }
 @media (max-width: 640px) {
-  .book-hero { padding: 40px 0; }
-  .quiz-section { padding: 24px; }
+  body { padding-bottom: 80px; } /* Room for bottom nav */
+  .book-page-layout { padding: 0 16px; }
+  .book-hero { padding: 30px 0; }
+  .book-hero-title { font-size: 2rem; }
+  .quiz-section { padding: 24px 16px; }
+  .summary-card { padding: 20px 16px; font-size: 1rem; }
+  .chapter-header { padding: 16px; }
+  .chapter-num { width: 32px; height: 32px; font-size: 0.8rem; }
+  .quote-block { padding: 20px 16px; }
 }

@@ -148,6 +148,10 @@ BOOKS.forEach(book => {
     `<img id="heroCoverImg" src="/${book.image}" alt="${book.title} book cover" title="${book.title} summary and key lessons" />`
   );
 
+  // Fix CSS and JS asset paths from relative to absolute so they work in the /book/ directory
+  pageHtml = pageHtml.replace(/href="css\//g, 'href="/css/');
+  pageHtml = pageHtml.replace(/src="js\//g, 'src="/js/');
+
   // We write to the new file
   const fileName = `${book.id}-summary.html`;
   fs.writeFileSync(path.join(outDir, fileName), pageHtml);

@@ -464,5 +464,22 @@
       window.location.href = `/book/${id}-summary`;
     }
   </script>
+
+  <!-- ─── MOBILE BOTTOM NAV ─── -->
+  <nav class="mobile-app-nav" aria-label="Mobile Bottom Navigation">
+    <a href="/" class="app-nav-item active">
+      <span class="app-nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#booksSection" class="app-nav-item">
+      <span class="app-nav-icon">📚</span>
+      <span>Books</span>
+    </a>
+    <a href="#search" class="app-nav-item" onclick="document.querySelector('.search-input').focus()">
+      <span class="app-nav-icon">🔍</span>
+      <span>Search</span>
+    </a>
+  </nav>
+
 </body>
 </html>
